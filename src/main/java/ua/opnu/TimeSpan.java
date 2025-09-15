@@ -83,7 +83,7 @@ public class TimeSpan {
         int b = span.hours*60 + span.minutes;
 
         if(a < b){
-            throw new IllegalArgumentException();
+            return;
         }
 
         this.hours = (a-b)/60;
@@ -95,7 +95,7 @@ public class TimeSpan {
     void scale(int factor) {
 
         if(factor < 0){
-            throw new IllegalArgumentException();
+           return;
         }
         int a =  this.hours*60 + this.minutes;
 
