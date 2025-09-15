@@ -44,6 +44,6 @@ public class BankAccount {
 
         receiver.deposit(amount);
 
-        return false;
+        return true;
     }
 }
