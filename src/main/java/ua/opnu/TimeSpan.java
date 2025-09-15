@@ -94,7 +94,7 @@ public class TimeSpan {
 
     void scale(int factor) {
 
-        if(factor < 0){
+        if(factor <= 0){
            return;
         }
         int a =  this.hours*60 + this.minutes;
