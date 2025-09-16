@@ -3,6 +3,8 @@ import java.util.ArrayList;
 
 public class Main {
   
+    public static void main(String[] args) {
+
         Student mark = new Student("mark", 2);
 
         mark.addCourse("math");
@@ -14,6 +16,7 @@ public class Main {
         System.out.println(mark.getName()+": рік навчання - "+mark.getYear());
 
         System.out.println(mark.getName()+": заплатив за навчання - " + mark.getTuition());
+    }
 }
 
 class Student {
