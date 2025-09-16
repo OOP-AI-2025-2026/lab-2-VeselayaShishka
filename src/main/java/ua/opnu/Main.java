@@ -1,61 +1,62 @@
 package ua.opnu;
+
 import java.util.ArrayList;
 
 public class Main {
-  
-    public static void main(String[] args) {
 
-        Student mark = new Student("mark", 2);
+  public static void main(String[] args) {
 
-        mark.addCourse("math");
-        mark.addCourse("chemistry");
-        mark.addCourse("physics");
+    Student mark = new Student("mark", 2);
 
-        System.out.println(mark.getName() + ": кількість вивчаємих дисциплін - " + mark.getCourseCount());
+    mark.addCourse("math");
+    mark.addCourse("chemistry");
+    mark.addCourse("physics");
 
-        System.out.println(mark.getName()+": рік навчання - "+mark.getYear());
+    System.out.println(
+        mark.getName() + ": кількість вивчаємих дисциплін - " + mark.getCourseCount());
 
-        System.out.println(mark.getName()+": заплатив за навчання - " + mark.getTuition());
-    }
+    System.out.println(mark.getName() + ": рік навчання - " + mark.getYear());
+
+    System.out.println(mark.getName() + ": заплатив за навчання - " + mark.getTuition());
+  }
 }
 
 class Student {
-    
-    int year;
-    String name;
-    ArrayList<String> courses = new ArrayList<>();
 
-    Student(String name, int year){
-        if(year < 0 ){
-            return;
-        }
+  int year;
+  String name;
+  ArrayList<String> courses = new ArrayList<>();
 
-        this.name = name;
-        this.year = year;
+  Student(String name, int year) {
+    if (year < 0) {
+      return;
     }
 
-    String getName(){
-        return this.name;
-    }
+    this.name = name;
+    this.year = year;
+  }
 
-    int getYear(){
-        return this.year;
-    }
+  String getName() {
+    return this.name;
+  }
 
-    int getTuition(){
-        return this.year*20000;
-    }
+  int getYear() {
+    return this.year;
+  }
 
-    void addCourse(String courseName){
-        courses.add(courseName);
-    }
+  int getTuition() {
+    return this.year * 20000;
+  }
 
-    void dropAll(){
-        courses.clear();
-    }
+  void addCourse(String courseName) {
+    courses.add(courseName);
+  }
 
-    int getCourseCount(){
-        return courses.size();
-    }
+  void dropAll() {
+    courses.clear();
+  }
 
+  int getCourseCount() {
+    return courses.size();
+  }
 }
